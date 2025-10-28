@@ -1,0 +1,335 @@
+/* Global theme */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8b1fa9, #ff77b7);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.28);
+    padding: 10px 30px;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffe8f7;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff9ee8;
+}
+
+/* Search box */
+.search-box {
+    margin-left: auto;
+}
+
+.search-input {
+    border-radius: 20px;
+    padding: 8px 15px;
+    border: none;
+}
+
+/* Hero banner */
+.hero-banner {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-banner h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.hero-banner span {
+    color: #ffe3fb;
+    text-shadow: 0 0 10px white;
+}
+
+/* Team section */
+.gallery-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.scroll-images {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.profile-card {
+    min-width: 200px;
+    background-color: rgba(255,255,255,0.14);
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.profile-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #fff;
+}
+
+/* Table Styling */
+.table-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    margin: auto;
+    width: 60%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0,0,0,0.28);
+    border-radius: 10px;
+}
+
+th, td {
+    border: 1px solid #ffffff80;
+    padding: 10px;
+}
+
+th {
+    background-color: rgba(0,0,0,0.45);
+}
+
+.table-scroll {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 20px;
+    border: 2px solid #ff75c3;
+    border-radius: 10px;
+    background: rgba(255, 182, 193, 0.15);
+    backdrop-filter: blur(4px);
+    scroll-behavior: smooth;
+}
+
+/* Stylish Scrollbar */
+.table-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #ff4fa0;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #ff2b8a;
+}
+
+/* Scroll Layout */
+.scroll-images {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    width: 220px;
+    height: 320px;
+    perspective: 1000px;
+}
+
+/* Flip Inner */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.profile-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card Faces */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border: 2px solid rgba(255, 47, 128, .4);
+}
+
+.card-front img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.card-front p {
+    text-align: center;
+    background: #ff9ccd;
+    padding: 8px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Back side */
+.card-back {
+    background: linear-gradient(135deg, #ff4fa0, #ffb3d1);
+    transform: rotateY(180deg);
+    text-align: center;
+    padding-top: 40px;
+    color: #fff;
+    box-shadow: 0 0 12px #ff007f;
+}
+
+/* Button on back */
+.play-btn {
+    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #fff;
+    color: #ff007f;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #ff007f;
+    color: #fff;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+    margin: 30px auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border-radius: 30px;
+    border: 2px solid #ff4fa0;
+    font-size: 16px;
+    outline: none;
+    color: #fff;
+    background: rgba(255, 79, 160, 0.2);
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease-in-out;
+}
+
+/* Glow effect on focus */
+.search-input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 10px #ff4fa0, 0 0 20px #ff4fa0;
+}
+
+/* Adding search icon */
+.search-box::after {
+    content: "🔍";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    color: #fff;
+}
+
+/* Placeholder styling */
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+
+/* FORMS */
+.form-section {
+    padding: 40px;
+    text-align: center;
+}
+
+form input, form textarea {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form button {
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #074268;
+}
